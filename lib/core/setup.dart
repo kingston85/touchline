@@ -14,7 +14,7 @@ void buildFixtures(
   int daysBetween = 7,
   bool randomDraw = true,
   bool homeVenues = true,
-  Team? Function(String id)? team,
+  Team? Function(String? id)? team,
   int? seed,
 }) {
   c.matches.clear();

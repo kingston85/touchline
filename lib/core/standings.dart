@@ -327,9 +327,9 @@ Map<String, PlayerStats> playerStats(Competition c, Team? Function(String id) te
           get(e.playerId!, tid).goals++;
           break;
         case EventType.penaltyGoal:
-          get(e.playerId!, tid)
-            ..goals++
-            ..pens++;
+          final ps = get(e.playerId!, tid);
+          ps.goals++;
+          ps.pens++;
           break;
         case EventType.ownGoal:
           // Own goal: the player belongs to the other side.
